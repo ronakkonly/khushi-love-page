@@ -121,7 +121,20 @@ heart.style.left=Math.random()*100+"vw";
 heart.style.animationDuration=(5+Math.random()*6)+"s";
 document.body.appendChild(heart);
 }
-const noBtn=document.getElementById("no");
+const noBtn=document.getElementById("no");noBtn.addEventListener("mouseenter",()=>{
+
+const card=document.querySelector(".card");
+
+const maxX=card.offsetWidth-120;
+const maxY=100;
+
+const randomX=Math.random()*maxX;
+const randomY=Math.random()*maxY;
+
+noBtn.style.left=randomX+"px";
+noBtn.style.top=randomY+"px";
+
+});
 noBtn.addEventListener("mouseover",()=>{
 const x=Math.random()*300;
 const y=Math.random()*80;
