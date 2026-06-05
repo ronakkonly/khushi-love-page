@@ -1,0 +1,136 @@
+}
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Khushi ❤️</title>
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ffb6d9,#ffd9ec);
+overflow:hidden;
+}
+.heart{
+position:absolute;
+font-size:25px;
+animation:float 8s linear infinite;
+opacity:.7;
+}
+@keyframes float{
+0%{
+transform:translateY(100vh);
+}
+100%{
+transform:translateY(-120px);
+}
+}
+.card{
+background:white;
+width:90%;
+max-width:600px;
+padding:35px;
+border-radius:30px;
+text-align:center;
+box-shadow:0 10px 40px rgba(0,0,0,.15);
+z-index:10;
+}
+h1{
+color:#ff4f8b;
+margin-bottom:15px;
+}
+p{
+color:#555;
+line-height:1.8;
+margin-bottom:25px;
+}
+h2{
+color:#d63384;
+margin-bottom:25px;
+}
+.buttons{
+position:relative;
+height:120px;
+}
+button{
+padding:12px 25px;
+font-size:18px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+transition:.3s;
+}
+#yes{
+background:#ff4f8b;
+color:white;
+margin-right:15px;
+}
+#yes:hover{
+transform:scale(1.08);
+}
+#no{
+background:#eee;
+position:absolute;
+}
+#message{
+margin-top:20px;
+font-size:24px;
+font-weight:bold;
+color:#ff4f8b;
+}
+</style>
+</head>
+<body>
+<div class="card">
+<h1>💖 For Khushi 💖</h1>
+<p>
+Khushi,<br><br>
+
+Pata nahi kab tum meri smile ka reason ban gayi.
+Tumse baat karna, tumhari hasi sunna aur tumhare messages ka wait karna meri aadat si ban gayi hai. ❤️
+
+Aaj bas dil ki ek baat puchni hai…
+
+</p>
+<h2>🌹 Kya tumhe mujhse pyaar hua hai? 🌹</h2>
+<div class="buttons">
+
+Haan ❤️
+
+Abhi nahi 😅
+
+</div>
+<div id="message"></div>
+</div>
+<script>
+for(let i=0;i<25;i++){
+let heart=document.createElement("div");
+heart.className="heart";
+heart.innerHTML="❤️";
+heart.style.left=Math.random()*100+"vw";
+heart.style.animationDuration=(5+Math.random()*6)+"s";
+document.body.appendChild(heart);
+}
+const noBtn=document.getElementById("no");
+noBtn.addEventListener("mouseover",()=>{
+const x=Math.random()*300;
+const y=Math.random()*80;
+noBtn.style.left=x+"px";
+noBtn.style.top=y+"px";
+});
+document.getElementById("yes").addEventListener("click",()=>{
+document.getElementById("message").innerHTML=
+"🥰❤️ Yayyyy! Ye meri life ka sabse pyara answer tha ❤️🥰";
+});
+</script>
+</body>
